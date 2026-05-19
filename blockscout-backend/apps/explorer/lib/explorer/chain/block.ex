@@ -465,13 +465,14 @@ defmodule Explorer.Chain.Block do
     transaction_fees = transaction_fees(transactions)
 
     static_reward =
-      Repo.one(
-        from(
-          er in EmissionReward,
-          where: fragment("int8range(?, ?) <@ ?", ^block_number, ^(block_number + 1), er.block_range),
-          select: er.reward
-        )
-      ) || fixed_block_reward() || Wei.zero()
+      fixed_block_reward() ||
+        Repo.one(
+          from(
+            er in EmissionReward,
+            where: fragment("int8range(?, ?) <@ ?", ^block_number, ^(block_number + 1), er.block_range),
+            select: er.reward
+          )
+        ) || Wei.zero()
 
     uncles_count = if is_list(block.uncles), do: Enum.count(block.uncles), else: 0
 
