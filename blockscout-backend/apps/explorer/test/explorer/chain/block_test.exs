@@ -105,6 +105,20 @@ defmodule Explorer.Chain.BlockTest do
 
       assert %{uncle_reward: ^expected_uncle_reward} = Block.block_reward_by_parts(block, [])
     end
+
+    test "uses fixed block reward when configured", %{emission_reward: %{block_range: range}} do
+      initial = Application.get_env(:explorer, Block) || []
+      Application.put_env(:explorer, Block, Keyword.merge(initial, fixed_block_reward: 100_000))
+
+      on_exit(fn ->
+        Application.put_env(:explorer, Block, initial)
+      end)
+
+      block = build(:block, number: range.from, uncles: [])
+
+      assert %{static_reward: %Wei{value: value}} = Block.block_reward_by_parts(block, [])
+      assert value == Decimal.new("100000000000000000000000")
+    end
   end
 
   describe "next_block_base_fee_per_gas" do
