@@ -12,7 +12,7 @@ import type { InternalTransaction } from 'client/slices/internal-tx/types/api';
 import type { Transaction } from 'client/slices/tx/types/api';
 import type { Reward } from 'types/api/reward';
 
-export type BlockType = 'block' | 'reorg' | 'uncle';
+export type BlockType = 'block' | 'reorg' | 'uncle' | 'key' | 'tx';
 
 export interface Block extends BlockArbitrum, BlockOptimism, BlockZkSync, BlockCelo, BlockZilliqa, BlockRootstock, BlockDataAvailability {
   height: number;

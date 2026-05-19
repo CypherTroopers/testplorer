@@ -151,6 +151,10 @@ const BlockDetails = ({ query }: Props) => {
         return 'Reorg';
       case 'uncle':
         return 'Uncle';
+      case 'key':
+        return 'Key block';
+      case 'tx':
+        return 'Tx block';
       default:
         return 'Block';
     }
