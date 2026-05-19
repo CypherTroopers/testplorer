@@ -1,104 +1,29 @@
 // SPDX-License-Identifier: LicenseRef-Blockscout
 
 import type { GridProps, HTMLChakraProps } from '@chakra-ui/react';
-import { Box, Grid, Flex, Text, VStack, HStack } from '@chakra-ui/react';
+import { Box, Grid, Flex, VStack } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 
 import type { CustomLinksGroup } from 'types/footerLinks';
 
-import useApiQuery from 'client/api/hooks/useApiQuery';
 import useFetch from 'client/api/hooks/useFetch';
 import type { ResourceError } from 'client/api/resources';
 
 import config from 'configs/app';
-import { useAppContext } from 'lib/contexts/app';
 import { Link } from 'toolkit/chakra/link';
 import { Skeleton } from 'toolkit/chakra/skeleton';
-import { copy } from 'toolkit/utils/htmlEntities';
-import CopyToClipboard from 'ui/shared/CopyToClipboard';
-import IconSvg from 'ui/shared/IconSvg';
 import { CONTENT_MAX_WIDTH } from 'ui/shared/layout/utils';
 import NetworkAddToWallet from 'ui/shared/NetworkAddToWallet';
 
 import FooterLinkItem from './FooterLinkItem';
 import IntTxsIndexingStatus from './IntTxsIndexingStatus';
-import getApiVersionUrl from './utils/getApiVersionUrl';
 
 const MAX_LINKS_COLUMNS = 4;
 
-const FRONT_VERSION_URL = `https://github.com/blockscout/frontend/tree/${ config.UI.footer.frontendVersion }`;
-const FRONT_COMMIT_URL = `https://github.com/blockscout/frontend/commit/${ config.UI.footer.frontendCommit }`;
-
 const Footer = () => {
 
-  const { data: backendVersionData } = useApiQuery('general:config_backend_version', {
-    queryOptions: {
-      staleTime: Infinity,
-      enabled: !config.features.multichain.isEnabled,
-      refetchOnMount: false,
-    },
-  });
-  const apiVersionUrl = getApiVersionUrl(backendVersionData?.backend_version);
-
-  const BLOCKSCOUT_LINKS = [
-    {
-      icon: 'social/git' as const,
-      iconSize: '20px',
-      text: 'Contribute',
-      url: 'https://github.com/blockscout/blockscout',
-    },
-    {
-      icon: 'brands/pro_api' as const,
-      iconSize: '20px',
-      text: 'PRO API',
-      url: 'https://dev.blockscout.com',
-    },
-    {
-      icon: 'brands/autoscout' as const,
-      iconSize: '20px',
-      text: 'Autoscout',
-      url: 'https://autoscout.blockscout.com',
-    },
-    {
-      icon: 'docs' as const,
-      iconSize: '20px',
-      text: 'Docs',
-      url: 'https://docs.blockscout.com',
-    },
-    {
-      icon: 'social/twitter' as const,
-      iconSize: '24px',
-      text: 'X',
-      url: 'https://x.com/blockscout',
-    },
-    {
-      icon: 'social/discord' as const,
-      iconSize: '24px',
-      text: 'Discord',
-      url: 'https://discord.gg/blockscout',
-    },
-    {
-      icon: 'brands/blockscout' as const,
-      iconSize: '20px',
-      text: 'All chains',
-      url: 'https://chains.blockscout.com',
-    },
-  ].filter(Boolean);
-
-  const frontendLink = (() => {
-    if (config.UI.footer.frontendVersion) {
-      return <Link href={ FRONT_VERSION_URL } external noIcon>{ config.UI.footer.frontendVersion }</Link>;
-    }
-
-    if (config.UI.footer.frontendCommit) {
-      return <Link href={ FRONT_COMMIT_URL } external noIcon>{ config.UI.footer.frontendCommit }</Link>;
-    }
-
-    return null;
-  })();
-
-  const { onionDomain } = useAppContext();
+  const BLOCKSCOUT_LINKS: Array<CustomLinksGroup['links'][number]> = [];
 
   const fetch = useFetch();
 
@@ -131,49 +56,8 @@ const Footer = () => {
   }, []);
 
   const renderProjectInfo = React.useCallback((gridArea?: GridProps['gridArea']) => {
-    const logoColor = { base: 'blue.600', _dark: 'white' };
-
-    return (
-      <Box gridArea={ gridArea }>
-        <Flex columnGap={ 2 } textStyle="xs" alignItems="center">
-          <span>Made with</span>
-          <Link href="https://www.blockscout.com" external noIcon display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
-            <IconSvg
-              name="networks/logo-placeholder"
-              width="80px"
-              height={ 4 }
-            />
-          </Link>
-        </Flex>
-        <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
-        </Text>
-        <VStack mt={ 6 } alignItems="start" textStyle="xs" gap={ 1 }>
-          <Flex flexDir={ onionDomain ? 'row' : 'column' } _empty={{ display: 'none' }} columnGap={ 6 } rowGap={ 1 }>
-            { apiVersionUrl && (
-              <Text>
-                Backend: <Link href={ apiVersionUrl } external noIcon>{ backendVersionData?.backend_version }</Link>
-              </Text>
-            ) }
-            { frontendLink && (
-              <Text>
-                Frontend: { frontendLink }
-              </Text>
-            ) }
-          </Flex>
-          { onionDomain && (
-            <HStack _empty={{ display: 'none' }} columnGap={ 0 }>
-              <Text aria-label={ `Also accessible via Tor Browser: ${ onionDomain }` }>Also accessible via Tor Browser</Text>
-              <CopyToClipboard text={ onionDomain } tooltipContent="Copy .onion address to clipboard" ml={ 1 }/>
-            </HStack>
-          ) }
-          <Text>
-            Copyright { copy } Blockscout Limited 2023-{ (new Date()).getFullYear() }
-          </Text>
-        </VStack>
-      </Box>
-    );
-  }, [ apiVersionUrl, backendVersionData?.backend_version, frontendLink, onionDomain ]);
+    return <Box gridArea={ gridArea }/>;
+  }, []);
 
   const containerProps: HTMLChakraProps<'div'> = {
     as: 'footer',
