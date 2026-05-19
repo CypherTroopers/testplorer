@@ -922,7 +922,50 @@ defmodule EthereumJSONRPC do
            id_to_params
            |> Blocks.requests(request)
            |> json_rpc(json_rpc_named_arguments) do
+      responses =
+        maybe_enrich_with_key_block_miner(
+          responses,
+          id_to_params,
+          json_rpc_named_arguments
+        )
+
       {:ok, Blocks.from_responses(responses, id_to_params)}
+    end
+  end
+
+  defp maybe_enrich_with_key_block_miner(responses, id_to_params, json_rpc_named_arguments)
+       when is_list(responses) and is_map(id_to_params) do
+    key_block_requests =
+      Enum.map(id_to_params, fn {id, %{number: number}} ->
+        request(%{id: id, method: "eth_getKeyBlockByNumber", params: [integer_to_quantity(number), false]})
+      end)
+
+    case json_rpc(key_block_requests, json_rpc_named_arguments) do
+      {:ok, key_block_responses} ->
+        out_address_by_id =
+          Enum.reduce(key_block_responses, %{}, fn
+            %{"id" => id, "result" => %{"outAddress" => out_address}}, acc when is_binary(out_address) ->
+              Map.put(acc, id, out_address)
+
+            _, acc ->
+              acc
+          end)
+
+        Enum.map(responses, fn response ->
+          case response do
+            %{"id" => id, "result" => %{} = result} ->
+              case Map.get(out_address_by_id, id) do
+                nil -> response
+                out_address -> put_in(response, ["result", "miner"], out_address)
+              end
+
+            _ ->
+              response
+          end
+        end)
+
+      _ ->
+        responses
     end
   end
 
