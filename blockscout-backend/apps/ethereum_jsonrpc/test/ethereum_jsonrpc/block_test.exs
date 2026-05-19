@@ -59,6 +59,28 @@ defmodule EthereumJSONRPC.BlockTest do
                |> Map.merge(chain_type_fields())
     end
 
+    test "uses zero-address placeholder when miner is empty string" do
+      result =
+        Block.elixir_to_params(%{
+          "difficulty" => 1,
+          "extraData" => "0x",
+          "gasLimit" => 1,
+          "gasUsed" => 1,
+          "hash" => "0x4d9423080290a650eaf6db19c87c76dff83d1b4ab64aefe6e5c5aa2d1f4b6623",
+          "logsBloom" => "0x0",
+          "miner" => "",
+          "number" => 1,
+          "parentHash" => "0xcd5b5c4cecd7f18a13fe974255badffd58e737dc67596d56bc01f063dd282e9e",
+          "receiptsRoot" => "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+          "size" => 1,
+          "stateRoot" => "0x6fd0a5d82ca77d9f38c3ebbde11b11d304a5fcf3854f291df64395ab38ed43ba",
+          "timestamp" => Timex.parse!("2015-07-30T15:32:07Z", "{ISO:Extended:Z}"),
+          "transactionsRoot" => "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421"
+        })
+
+      assert result.miner_hash == "0x0000000000000000000000000000000000000000"
+    end
+
     case Application.compile_env(:explorer, :chain_type) do
       :rsk ->
         defp chain_type_fields,

@@ -17,6 +17,7 @@ defmodule EthereumJSONRPC.Block do
   # the list of these in each block is empty, and the hash of this list
   # (sha3Uncles) is the RLP-encoded hash of an empty list.
   @sha3_uncles_empty_list "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+  @zero_address "0x0000000000000000000000000000000000000000"
 
   case @chain_type do
     :rsk ->
@@ -388,7 +389,7 @@ defmodule EthereumJSONRPC.Block do
       gas_used: gas_used,
       hash: hash,
       logs_bloom: logs_bloom,
-      miner_hash: miner_hash,
+      miner_hash: normalize_miner_hash(miner_hash),
       mix_hash: Map.get(elixir, "mixHash", "0x0"),
       nonce: Map.get(elixir, "nonce", 0),
       number: number,
@@ -433,7 +434,7 @@ defmodule EthereumJSONRPC.Block do
       gas_used: gas_used,
       hash: hash,
       logs_bloom: logs_bloom,
-      miner_hash: miner_hash,
+      miner_hash: normalize_miner_hash(miner_hash),
       mix_hash: Map.get(elixir, "mixHash", "0x0"),
       nonce: Map.get(elixir, "nonce", 0),
       number: number,
@@ -477,7 +478,7 @@ defmodule EthereumJSONRPC.Block do
       gas_used: gas_used,
       hash: hash,
       logs_bloom: logs_bloom,
-      miner_hash: miner_hash,
+      miner_hash: normalize_miner_hash(miner_hash),
       mix_hash: Map.get(elixir, "mixHash", "0x0"),
       nonce: Map.get(elixir, "nonce", 0),
       number: number,
@@ -521,7 +522,7 @@ defmodule EthereumJSONRPC.Block do
       gas_used: gas_used,
       hash: hash,
       logs_bloom: logs_bloom,
-      miner_hash: miner_hash,
+      miner_hash: normalize_miner_hash(miner_hash),
       mix_hash: Map.get(elixir, "mixHash", "0x0"),
       nonce: Map.get(elixir, "nonce", 0),
       number: number,
@@ -952,6 +953,10 @@ defmodule EthereumJSONRPC.Block do
        when not is_nil(block_number) do
     {key, Withdrawals.to_elixir(withdrawals, block_hash, quantity_to_integer(block_number))}
   end
+
+  defp normalize_miner_hash(nil), do: @zero_address
+  defp normalize_miner_hash(""), do: @zero_address
+  defp normalize_miner_hash(miner_hash), do: miner_hash
 
   case @chain_type do
     :zilliqa ->
