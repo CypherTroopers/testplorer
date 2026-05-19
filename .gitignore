@@ -1,9 +1,6 @@
-# secrets
 .env
 **/.env
 .env.*
 **/.env.*
-
-# nested git backups
 .git.backup/
 **/.git.backup/
