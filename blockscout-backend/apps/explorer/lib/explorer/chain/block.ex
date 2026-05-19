@@ -471,7 +471,7 @@ defmodule Explorer.Chain.Block do
           where: fragment("int8range(?, ?) <@ ?", ^block_number, ^(block_number + 1), er.block_range),
           select: er.reward
         )
-      ) || Wei.zero()
+      ) || fixed_block_reward() || Wei.zero()
 
     uncles_count = if is_list(block.uncles), do: Enum.count(block.uncles), else: 0
 
@@ -491,6 +491,22 @@ defmodule Explorer.Chain.Block do
   end
 
   def uncle_reward_coef, do: @uncle_reward_coef
+
+  defp fixed_block_reward do
+    case Application.get_env(:explorer, :chain_type) do
+      :cypherium ->
+        Wei.from(Decimal.new(100_000), :ether)
+
+      _ ->
+        case Application.get_env(:explorer, __MODULE__)[:fixed_block_reward] do
+          reward when is_integer(reward) and reward >= 0 ->
+            Wei.from(Decimal.new(reward), :ether)
+
+          _ ->
+            nil
+        end
+    end
+  end
 
   # Gets EIP-1559 config actual for the given block number.
   # If not found, returns EIP_1559_BASE_FEE_MAX_CHANGE_DENOMINATOR and EIP_1559_ELASTICITY_MULTIPLIER env values.
