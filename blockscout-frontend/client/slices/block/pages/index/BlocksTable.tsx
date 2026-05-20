@@ -10,7 +10,6 @@ import { AddressHighlightProvider } from 'client/slices/address/contexts/address
 import BlocksTableItem from 'client/slices/block/pages/index/BlocksTableItem';
 
 import getChainValidatorTitle from 'client/shared/chain/get-chain-validator-title';
-import { currencyUnits } from 'client/shared/chain/units';
 import useInitialList from 'client/shared/lists/useInitialList';
 
 import config from 'configs/app';
@@ -31,10 +30,6 @@ interface Props {
 
 const VALIDATOR_COL_WEIGHT = 23;
 const GAS_COL_WEIGHT = 33;
-const REWARD_COL_WEIGHT = 22;
-const FEES_COL_WEIGHT = 22;
-
-const isRollup = config.features.rollup.isEnabled;
 
 const BlocksTable = ({ data, isLoading, top, page, showSocketInfo, socketInfoNum, showSocketErrorAlert, chainData }: Props) => {
   const initialList = useInitialList({
@@ -45,9 +40,7 @@ const BlocksTable = ({ data, isLoading, top, page, showSocketInfo, socketInfoNum
 
   const widthBase =
     (!config.UI.views.block.hiddenFields?.miner ? VALIDATOR_COL_WEIGHT : 0) +
-    GAS_COL_WEIGHT +
-    (!isRollup && !config.UI.views.block.hiddenFields?.total_reward ? REWARD_COL_WEIGHT : 0) +
-    (!isRollup && !config.UI.views.block.hiddenFields?.burnt_fees ? FEES_COL_WEIGHT : 0);
+    GAS_COL_WEIGHT;
 
   return (
     <AddressHighlightProvider>
@@ -67,12 +60,6 @@ const BlocksTable = ({ data, isLoading, top, page, showSocketInfo, socketInfoNum
             ) }
             <TableColumnHeader width="64px" isNumeric>Txn</TableColumnHeader>
             <TableColumnHeader width={ `${ GAS_COL_WEIGHT / widthBase * 100 }%` }>Gas used</TableColumnHeader>
-            { !isRollup && !config.UI.views.block.hiddenFields?.total_reward &&
-              <TableColumnHeader width={ `${ REWARD_COL_WEIGHT / widthBase * 100 }%` }>Reward { currencyUnits.ether }</TableColumnHeader> }
-            { !isRollup && !config.UI.views.block.hiddenFields?.burnt_fees &&
-              <TableColumnHeader width={ `${ FEES_COL_WEIGHT / widthBase * 100 }%` }>Burnt fees { currencyUnits.ether }</TableColumnHeader> }
-            { !isRollup && !config.UI.views.block.hiddenFields?.base_fee &&
-              <TableColumnHeader width="150px" isNumeric>Base fee</TableColumnHeader> }
           </TableRow>
         </TableHeaderSticky>
         <TableBody>
