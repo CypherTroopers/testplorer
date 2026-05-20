@@ -22,7 +22,7 @@
             custom_classes_tooltip: ["miner-address-tooltip"] %>
         </div>
       <% end %>
-      <%= if BlockScoutWeb.BlockView.show_reward?(@block.rewards) do %>
+      <%= if BlockScoutWeb.BlockView.show_reward?(@block) do %>
         <div class="text-truncate">
           <%= gettext "Reward" %> <%= BlockScoutWeb.BlockView.combined_rewards_value(@block) %>
         </div>
