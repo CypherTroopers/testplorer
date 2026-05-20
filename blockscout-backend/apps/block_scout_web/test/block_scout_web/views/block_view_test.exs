@@ -3,6 +3,7 @@ defmodule BlockScoutWeb.BlockViewTest do
   use BlockScoutWeb.ConnCase, async: true
 
   alias BlockScoutWeb.BlockView
+  alias Explorer.Chain.Wei
   alias Explorer.Repo
 
   describe "average_gas_price/1" do
@@ -51,15 +52,32 @@ defmodule BlockScoutWeb.BlockViewTest do
   end
 
   describe "show_reward?/1" do
-    test "returns false when list of rewards is empty" do
-      assert BlockView.show_reward?([]) == false
+    test "returns true for a block with no rewards" do
+      block = insert(:block)
+
+      assert BlockView.show_reward?(block) == true
     end
 
-    test "returns true when list of rewards is not empty" do
+    test "returns true for a block with rewards" do
       block = insert(:block)
-      validator = insert(:reward, address_hash: block.miner_hash, block_hash: block.hash, address_type: :validator)
+      insert(:reward, address_hash: block.miner_hash, block_hash: block.hash, address_type: :validator)
 
-      assert BlockView.show_reward?([validator]) == true
+      assert BlockView.show_reward?(Repo.preload(block, :rewards)) == true
+    end
+  end
+
+  describe "display_reward/1" do
+    test "returns default reward when block has no rewards" do
+      block = insert(:block)
+
+      assert BlockView.display_reward(Repo.preload(block, :rewards)) ==
+               Wei.from(Decimal.new(100_000), :ether)
+    end
+
+    test "returns zero when block has no rewards and no miner" do
+      block = insert(:block, miner: nil)
+
+      assert BlockView.display_reward(Repo.preload(block, :rewards)) == Wei.zero()
     end
   end
 
