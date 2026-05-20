@@ -8,7 +8,6 @@ import useIsAuth from 'client/features/account/hooks/useIsAuth';
 
 import config from 'configs/app';
 import useNavItems, { isGroupItem } from 'lib/hooks/useNavItems';
-import RewardsButton from 'ui/rewards/RewardsButton';
 import { CONTENT_MAX_WIDTH } from 'ui/shared/layout/utils';
 import NetworkLogo from 'ui/snippets/networkLogo/NetworkLogo';
 
@@ -65,7 +64,6 @@ const NavigationDesktop = () => {
         </chakra.nav>
         <Flex gap={ 2 } ml={ 8 } _empty={{ display: 'none' }}>
           <NavigationPromoBanner/>
-          { config.features.rewards.isEnabled && <RewardsButton size="sm"/> }
           <UserProfileDesktop buttonSize="sm"/>
         </Flex>
       </Flex>

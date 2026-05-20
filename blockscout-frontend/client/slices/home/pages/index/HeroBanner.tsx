@@ -13,7 +13,6 @@ import UserProfileDesktop from 'client/features/account/components/user-profile/
 import useIsMobile from 'client/shared/hooks/useIsMobile';
 
 import config from 'configs/app';
-import RewardsButton from 'ui/rewards/RewardsButton';
 import AdBanner from 'ui/shared/ad/AdBanner';
 
 export const BACKGROUND_DEFAULT =
@@ -87,7 +86,6 @@ const HeroBanner = () => {
           </Heading>
           { config.UI.navigation.layout === 'vertical' && (
             <Box display={{ base: 'none', lg: 'flex' }} gap={ 2 }>
-              { config.features.rewards.isEnabled && <RewardsButton variant="hero"/> }
               <UserProfileDesktop buttonVariant="hero"/>
             </Box>
           ) }

@@ -11,7 +11,6 @@ import UserWalletMobile from 'client/features/account/components/user-profile/wa
 
 import config from 'configs/app';
 import { useIsSticky } from 'toolkit/hooks/useIsSticky';
-import RewardsButton from 'ui/rewards/RewardsButton';
 import NetworkIcon from 'ui/snippets/networkLogo/NetworkIcon';
 
 import RollupStageBadge from '../navigation/RollupStageBadge';
@@ -77,7 +76,6 @@ const HeaderMobile = ({ hideSearchButton, onGoToSearchResults }: Props) => {
         </Flex>
         <Flex columnGap={ 2 }>
           { !hideSearchButton && <SearchBarMobile onGoToSearchResults={ onGoToSearchResults }/> }
-          { config.features.rewards.isEnabled && <RewardsButton/> }
           { userProfile }
         </Flex>
       </Flex>
