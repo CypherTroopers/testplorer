@@ -229,17 +229,26 @@
                 <dd class="col-sm-9 col-lg-10"><%= format_wei_value(%Wei{value: priority_fee}, :ether) %></dd>
             </dl>
           <% end %>
-          <%= if show_reward?(@block.rewards) do %>
+          <%= if show_reward?(@block) do %>
             <hr>
-            <%= for block_reward <- @block.rewards do %>
-                <dl class="row">
-                  <dt class="col-sm-3 col-lg-2 text-muted">
-                    <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
-                    text: gettext("Amount of distributed reward. Miners receive a static block reward + Tx fees + uncle fees.") %>
-                    <%= block_reward_text(block_reward, @block.miner.hash) %>
-                  </dt>
-                  <dd class="col-sm-9 col-lg-10"><%= format_wei_value(block_reward.reward, :ether) %></dd>
-                </dl>
+            <%= if Enum.empty?(@block.rewards) do %>
+              <dl class="row">
+                <dt class="col-sm-3 col-lg-2 text-muted">
+                  <%= gettext("Miner Reward") %>
+                </dt>
+                <dd class="col-sm-9 col-lg-10"><%= format_wei_value(display_reward(@block), :ether) %></dd>
+              </dl>
+            <% else %>
+              <%= for block_reward <- @block.rewards do %>
+                  <dl class="row">
+                    <dt class="col-sm-3 col-lg-2 text-muted">
+                      <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
+                      text: gettext("Amount of distributed reward.") %>
+                      <%= block_reward_text(block_reward, @block.miner.hash) %>
+                    </dt>
+                    <dd class="col-sm-9 col-lg-10"><%= format_wei_value(block_reward.reward, :ether) %></dd>
+                  </dl>
+              <% end %>
             <% end %>
           <% end %>
           <%= if block_type(@block) == "Block" do %>

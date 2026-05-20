@@ -53,8 +53,15 @@ defmodule BlockScoutWeb.BlockView do
     Timex.format!(timestamp, "%b-%d-%Y %H:%M:%S %p %Z", :strftime)
   end
 
-  def show_reward?([]), do: false
-  def show_reward?(_), do: true
+  def show_reward?(%Block{}), do: true
+
+  def display_reward(%Block{rewards: []} = block) do
+    if is_nil(block.miner), do: Wei.zero(), else: Wei.from(Decimal.new(100_000), :ether)
+  end
+
+  def display_reward(%Block{} = block) do
+    Block.block_combined_rewards(block)
+  end
 
   def block_reward_text(%Reward{address_hash: beneficiary_address, address_type: :validator}, block_miner_address) do
     if Application.get_env(:explorer, Reward, %{})[:keys_manager_contract_address] do
@@ -80,7 +87,7 @@ defmodule BlockScoutWeb.BlockView do
 
   def combined_rewards_value(block) do
     block
-    |> Block.block_combined_rewards()
+    |> display_reward()
     |> format_wei_value(:ether)
   end
 end
