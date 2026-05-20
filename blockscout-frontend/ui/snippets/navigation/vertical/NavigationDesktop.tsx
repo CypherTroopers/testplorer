@@ -18,7 +18,6 @@ import RollupStageBadge from '../RollupStageBadge';
 import TestnetBadge from '../TestnetBadge';
 import NavLink from './NavLink';
 import NavLinkGroup from './NavLinkGroup';
-import NavLinkRewards from './NavLinkRewards';
 
 const NavigationDesktop = () => {
   const appProps = useAppContext();
@@ -107,7 +106,6 @@ const NavigationDesktop = () => {
       { isAuth && (
         <Box as="nav" borderTopWidth="1px" borderColor="border.divider" w="100%" mt={ 3 } pt={ 3 }>
           <VStack as="ul" gap="1" alignItems="flex-start">
-            <NavLinkRewards isCollapsed={ isCollapsed }/>
             { accountNavItems.map((item) => <NavLink key={ item.text } item={ item } isCollapsed={ isCollapsed }/>) }
           </VStack>
         </Box>

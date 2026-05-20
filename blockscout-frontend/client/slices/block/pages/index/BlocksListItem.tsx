@@ -12,11 +12,9 @@ import { route } from 'nextjs-routes';
 
 import AddressEntity from 'client/slices/address/components/entity/AddressEntity';
 import BlockEntity from 'client/slices/block/components/entity/BlockEntity';
-import getBlockTotalReward from 'client/slices/block/utils/get-block-total-reward';
 import GasUsed from 'client/slices/gas/components/GasUsed';
 
 import getChainValidatorTitle from 'client/shared/chain/get-chain-validator-title';
-import { currencyUnits } from 'client/shared/chain/units';
 
 import config from 'configs/app';
 import { Link } from 'toolkit/chakra/link';
@@ -25,9 +23,6 @@ import { Tooltip } from 'toolkit/chakra/tooltip';
 import IconSvg from 'ui/shared/IconSvg';
 import ListItemMobile from 'ui/shared/ListItemMobile/ListItemMobile';
 import TimeWithTooltip from 'ui/shared/time/TimeWithTooltip';
-import Utilization from 'ui/shared/Utilization/Utilization';
-import NativeCoinValue from 'ui/shared/value/NativeCoinValue';
-import SimpleValue from 'ui/shared/value/SimpleValue';
 
 interface Props {
   data: Block;
@@ -37,13 +32,7 @@ interface Props {
   chainData?: ClusterChainConfig;
 }
 
-const isRollup = config.features.rollup.isEnabled;
-
 const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chainData }: Props) => {
-  const totalReward = getBlockTotalReward(data);
-  const burntFees = BigNumber(data.burnt_fees || 0);
-  const txFees = BigNumber(data.transaction_fees || 0);
-
   return (
     <ListItemMobile rowGap={ 3 } key={ String(data.height) } animation={ animation }>
       <Flex justifyContent="space-between" w="100%">
@@ -115,40 +104,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
           />
         </Flex>
       </Box>
-      { !isRollup && !config.UI.views.block.hiddenFields?.total_reward && (
-        <Flex columnGap={ 2 }>
-          <Text fontWeight={ 500 }>Reward { currencyUnits.ether }</Text>
-          <SimpleValue value={ totalReward } loading={ isLoading } color="text.secondary"/>
-        </Flex>
-      ) }
-      { !isRollup && !config.UI.views.block.hiddenFields?.burnt_fees && (
-        <Box>
-          <Text fontWeight={ 500 }>Burnt fees</Text>
-          <Flex columnGap={ 4 } mt={ 2 }>
-            <NativeCoinValue
-              amount={ data.burnt_fees }
-              noSymbol
-              startElement={ <IconSvg name="flame" mr={ 2 } boxSize={ 5 } color={{ _light: 'gray.500', _dark: 'inherit' }} isLoading={ isLoading }/> }
-              loading={ isLoading }
-              display="flex"
-              color="text.secondary"
-            />
-            <Utilization value={ burntFees.div(txFees).toNumber() } isLoading={ isLoading }/>
-          </Flex>
-        </Box>
-      ) }
-      { !isRollup && !config.UI.views.block.hiddenFields?.base_fee && data.base_fee_per_gas && (
-        <Flex columnGap={ 2 }>
-          <Text fontWeight={ 500 }>Base fee</Text>
-          <NativeCoinValue
-            amount={ data.base_fee_per_gas }
-            loading={ isLoading }
-            gweiThreshold={ 4 }
-            units="wei"
-            color="text.secondary"
-          />
-        </Flex>
-      ) }
+
     </ListItemMobile>
   );
 };

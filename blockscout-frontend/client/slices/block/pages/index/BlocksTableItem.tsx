@@ -12,7 +12,6 @@ import { route } from 'nextjs-routes';
 import AddressEntity from 'client/slices/address/components/entity/AddressEntity';
 import BlockPendingUpdateHint from 'client/slices/block/components/BlockPendingUpdateHint';
 import BlockEntity from 'client/slices/block/components/entity/BlockEntity';
-import getBlockTotalReward from 'client/slices/block/utils/get-block-total-reward';
 import GasUsed from 'client/slices/gas/components/GasUsed';
 
 import config from 'configs/app';
@@ -23,9 +22,6 @@ import { Tooltip } from 'toolkit/chakra/tooltip';
 import ChainIcon from 'ui/shared/externalChains/ChainIcon';
 import IconSvg from 'ui/shared/IconSvg';
 import TimeWithTooltip from 'ui/shared/time/TimeWithTooltip';
-import Utilization from 'ui/shared/Utilization/Utilization';
-import NativeCoinValue from 'ui/shared/value/NativeCoinValue';
-import SimpleValue from 'ui/shared/value/SimpleValue';
 
 interface Props {
   data: Block;
@@ -35,13 +31,7 @@ interface Props {
   chainData?: ClusterChainConfig;
 }
 
-const isRollup = config.features.rollup.isEnabled;
-
 const BlocksTableItem = ({ data, isLoading, enableTimeIncrement, animation, chainData }: Props) => {
-  const totalReward = getBlockTotalReward(data);
-  const burntFees = BigNumber(data.burnt_fees || 0);
-  const txFees = BigNumber(data.transaction_fees || 0);
-
   return (
     <TableRow animation={ animation }>
       { chainData && (
@@ -115,35 +105,7 @@ const BlocksTableItem = ({ data, isLoading, enableTimeIncrement, animation, chai
           />
         </Flex>
       </TableCell>
-      { !isRollup && !config.UI.views.block.hiddenFields?.total_reward && (
-        <TableCell >
-          <SimpleValue value={ totalReward } loading={ isLoading }/>
-        </TableCell>
-      ) }
-      { !isRollup && !config.UI.views.block.hiddenFields?.burnt_fees && (
-        <TableCell >
-          <NativeCoinValue
-            amount={ data.burnt_fees }
-            noSymbol
-            startElement={ <IconSvg name="flame" mr={ 2 } boxSize={ 5 } color={{ _light: 'gray.500', _dark: 'inherit' }} isLoading={ isLoading }/> }
-            loading={ isLoading }
-            display="flex"
-          />
-          <Tooltip content="Burnt fees / Txn fees * 100%" disabled={ isLoading }>
-            <Utilization mt={ 2 } w="min-content" value={ burntFees.div(txFees).toNumber() } isLoading={ isLoading }/>
-          </Tooltip>
-        </TableCell>
-      ) }
-      { !isRollup && !config.UI.views.block.hiddenFields?.base_fee && data.base_fee_per_gas && (
-        <TableCell isNumeric>
-          <NativeCoinValue
-            amount={ data.base_fee_per_gas }
-            loading={ isLoading }
-            gweiThreshold={ 4 }
-            units="wei"
-          />
-        </TableCell>
-      ) }
+
     </TableRow>
   );
 };
