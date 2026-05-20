@@ -8,7 +8,6 @@ import SearchBar from 'client/slices/search/components/search-bar/SearchBarDeskt
 import UserProfileDesktop from 'client/features/account/components/user-profile/UserProfileDesktop';
 
 import config from 'configs/app';
-import RewardsButton from 'ui/rewards/RewardsButton';
 
 type Props = {
   renderSearchBar?: () => React.ReactNode;
@@ -32,7 +31,6 @@ const HeaderDesktop = ({ renderSearchBar }: Props) => {
       </Box>
       { config.UI.navigation.layout === 'vertical' && (
         <Box display="flex" gap={ 2 } flexShrink={ 0 }>
-          { config.features.rewards.isEnabled && <RewardsButton/> }
           <UserProfileDesktop buttonVariant="header"/>
         </Box>
       ) }
