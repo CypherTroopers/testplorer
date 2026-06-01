@@ -4,3 +4,7 @@
 **/.env.*
 .git.backup/
 **/.git.backup/
+.env
+*.log
+*.bak*
+!.env.example
