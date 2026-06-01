@@ -78,3 +78,9 @@ tasks_in_progress
 /temp
 
 openapi.yaml
+*.log
+.env
+*.log
+*.bak*
+
+!.env.example
