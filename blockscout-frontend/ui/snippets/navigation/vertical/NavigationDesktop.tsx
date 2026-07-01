@@ -1,12 +1,14 @@
 // SPDX-License-Identifier: LicenseRef-Blockscout
 
-import { Flex, Box, VStack } from '@chakra-ui/react';
+import { Flex, Box, VStack, chakra, Text } from '@chakra-ui/react';
+import { route } from 'nextjs-routes';
 import React from 'react';
 
 import useIsAuth from 'client/features/account/hooks/useIsAuth';
 
 import * as cookies from 'client/shared/storage/cookies';
 
+import config from 'configs/app';
 import { useAppContext } from 'lib/contexts/app';
 import useNavItems, { isGroupItem } from 'lib/hooks/useNavItems';
 import IconSvg from 'ui/shared/IconSvg';
@@ -92,7 +94,46 @@ const NavigationDesktop = () => {
           <NetworkIcon/>
         </Box>
       </Box>
-      <Box as="nav" mt={ 6 } w="100%">
+      <chakra.a
+        href={ route({ pathname: '/' }) }
+        aria-label="Go to top page"
+        display="flex"
+        alignItems="center"
+        justifyContent={{ lg: isExpanded ? 'space-between' : 'center', xl: isCollapsed ? 'center' : 'space-between' }}
+        minH="44px"
+        w={{ lg: isExpanded ? '100%' : '60px', xl: isCollapsed ? '60px' : '100%' }}
+        mt={ 3 }
+        px={{ lg: isExpanded ? 3 : 0, xl: isCollapsed ? 0 : 3 }}
+        borderWidth="2px"
+        borderStyle="solid"
+        borderColor="button.header.border"
+        borderRadius="base"
+        bgColor="button.header.bg"
+        color="text.primary"
+        fontWeight={ 600 }
+        transitionProperty="width, padding, background-color, border-color, color"
+        transitionDuration="normal"
+        transitionTimingFunction="ease"
+        _hover={{
+          bgColor: 'button.header.bg.hover',
+          borderColor: 'hover',
+          color: 'hover',
+          textDecoration: 'none',
+        }}
+      >
+        <Text
+          display={{ base: 'none', lg: isExpanded ? 'block' : 'none', xl: isCollapsed ? 'none' : 'block' }}
+          overflow="hidden"
+          textOverflow="ellipsis"
+          whiteSpace="nowrap"
+        >
+          { config.chain.name }
+        </Text>
+        <Text as="span" flexShrink={ 0 } fontSize="sm" color="inherit">
+          Top
+        </Text>
+      </chakra.a>
+      <Box as="nav" mt={ 3 } w="100%">
         <VStack as="ul" gap="1" alignItems="flex-start">
           { mainNavItems.map((item) => {
             if (isGroupItem(item)) {
@@ -113,25 +154,26 @@ const NavigationDesktop = () => {
       <NavigationPromoBanner isCollapsed={ isCollapsed }/>
       <IconSvg
         name="arrows/east-mini"
-        width={ 6 }
-        height={ 6 }
+        width={ 8 }
+        height={ 8 }
         _hover={{ color: 'hover' }}
         borderRadius="base"
-        bgColor="bg.primary"
-        color={{ base: 'blackAlpha.400', _dark: 'whiteAlpha.400' }}
-        borderWidth="1px"
-        borderColor="border.divider"
+        bgColor="button.header.bg"
+        color="text.primary"
+        borderWidth="2px"
+        borderColor="button.header.border"
         transform={{ lg: isExpanded ? 'rotate(0)' : 'rotate(180deg)', xl: isCollapsed ? 'rotate(180deg)' : 'rotate(0)' }}
         transformOrigin="center"
         position="absolute"
-        top="104px"
-        left={{ lg: isExpanded ? '216px' : '80px', xl: isCollapsed ? '80px' : '216px' }}
+        top="106px"
+        left={{ lg: isExpanded ? '212px' : '76px', xl: isCollapsed ? '76px' : '212px' }}
         cursor="pointer"
         onClick={ handleTogglerClick }
         aria-label="Expand/Collapse menu"
-        display="none"
-        _groupHover={{ display: 'block' }}
-        transitionProperty="transform, left"
+        display="block"
+        zIndex={ 1 }
+        boxShadow="sm"
+        transitionProperty="transform, left, background-color, border-color, color"
         transitionDuration="normal"
         transitionTimingFunction="ease"
       />

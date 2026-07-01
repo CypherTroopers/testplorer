@@ -161,7 +161,7 @@ export const recipe = defineSlotRecipe({
         trigger: {
           fontWeight: '500',
           color: 'tabs.secondary.fg',
-          bg: 'transparent',
+          bg: 'tabs.secondary.bg',
           borderWidth: '2px',
           borderStyle: 'solid',
           borderColor: 'tabs.secondary.border',
@@ -175,6 +175,7 @@ export const recipe = defineSlotRecipe({
             },
           },
           _hover: {
+            bg: 'tabs.secondary.bg.hover',
             color: 'hover',
             borderColor: 'hover',
           },
@@ -186,7 +187,7 @@ export const recipe = defineSlotRecipe({
           bg: 'transparent',
           borderWidth: '2px',
           borderStyle: 'solid',
-          borderColor: 'selected.control.bg',
+          borderColor: 'tabs.segmented.border',
           _hover: {
             color: 'hover',
           },

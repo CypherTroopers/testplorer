@@ -94,11 +94,11 @@ export const recipe = defineRecipe({
       dropdown: {
         borderWidth: '2px',
         borderStyle: 'solid',
-        bg: 'transparent',
+        bg: 'button.dropdown.bg',
         color: 'button.dropdown.fg',
         borderColor: 'button.dropdown.border',
         _hover: {
-          bg: 'transparent',
+          bg: 'button.dropdown.bg.hover',
           color: 'hover',
           borderColor: 'hover',
         },
@@ -112,7 +112,7 @@ export const recipe = defineRecipe({
         },
         // When the dropdown is open, the button should be active
         _expanded: {
-          bg: 'transparent',
+          bg: 'button.dropdown.bg.hover',
           color: 'hover',
           borderColor: 'hover',
         },
@@ -134,13 +134,13 @@ export const recipe = defineRecipe({
         },
       },
       header: {
-        bg: 'transparent',
+        bg: 'button.header.bg',
         color: 'button.header.fg',
         borderColor: 'button.header.border',
         borderWidth: '2px',
         borderStyle: 'solid',
         _hover: {
-          bg: 'transparent',
+          bg: 'button.header.bg.hover',
           color: 'hover',
           borderColor: 'hover',
         },
@@ -209,7 +209,7 @@ export const recipe = defineRecipe({
       segmented: {
         bg: 'transparent',
         color: 'button.segmented.fg',
-        borderColor: 'selected.control.bg',
+        borderColor: 'button.segmented.border',
         borderWidth: '2px',
         borderStyle: 'solid',
         borderRadius: 'none',
@@ -332,13 +332,19 @@ export const recipe = defineRecipe({
       pagination: {
         borderWidth: '2px',
         borderStyle: 'solid',
-        bg: 'transparent',
+        bg: 'button.pagination.bg',
         color: 'button.pagination.fg',
         borderColor: 'button.pagination.border',
         _hover: {
-          bg: 'transparent',
+          bg: 'button.pagination.bg',
           color: 'hover',
           borderColor: 'hover',
+        },
+        _disabled: {
+          opacity: 1,
+          bg: 'button.pagination.bg.disabled',
+          color: 'button.pagination.fg.disabled',
+          borderColor: 'button.pagination.border.disabled',
         },
         _selected: {
           bg: 'selected.control.bg',

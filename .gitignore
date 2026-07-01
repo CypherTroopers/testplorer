@@ -8,3 +8,30 @@
 *.log
 *.bak*
 !.env.example
+
+# secrets
+.env
+.env.*
+*.pem
+*.key
+*secret*
+*token*
+*password*
+
+# Blockscout / Elixir build artifacts
+_build/
+deps/
+logs/
+tmp/
+
+# Node / frontend artifacts
+node_modules/
+.next/
+dist/
+build/
+.cache/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

@@ -9,7 +9,7 @@ export const recipe = defineSlotRecipe({
       outline: 0,
       bg: 'popover.bg',
       boxShadow: 'popover',
-      color: 'initial',
+      color: 'text.primary',
       maxHeight: 'var(--available-height)',
       '--menu-z-index': 'zIndex.popover',
       zIndex: 'calc(var(--menu-z-index) + var(--layer-index, 0))',
@@ -66,7 +66,7 @@ export const recipe = defineSlotRecipe({
     },
     separator: {
       height: '1px',
-      bg: 'bg.muted',
+      bg: 'border.divider',
       my: '1',
       mx: '-1',
     },

@@ -43,10 +43,11 @@ const Settings = () => {
         <Flex alignItems="center">
           <PopoverTrigger>
             <IconButton
-              variant="link"
-              size="2xs"
+              variant="header"
+              size="md"
               borderRadius="sm"
               aria-label="User settings"
+              color="text.primary"
             >
               <IconSvg name="gear"/>
             </IconButton>

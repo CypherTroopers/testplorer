@@ -69,7 +69,7 @@ const HeaderMobile = ({ hideSearchButton, onGoToSearchResults }: Props) => {
         boxShadow={ isSticky ? 'md' : 'none' }
       >
         <Burger/>
-        <Flex alignItems="center" flexGrow={ 1 } mx={ 2 }>
+        <Flex alignItems="center" flexGrow={ 1 } minW={ 0 } mx={ 2 } overflow="hidden">
           <NetworkIcon/>
           <TestnetBadge ml={ 2 }/>
           <RollupStageBadge ml={ 2 }/>

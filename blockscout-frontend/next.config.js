@@ -59,7 +59,18 @@ const moduleExports = {
   rewrites,
   redirects,
   headers,
-  output: 'standalone',
+  output: process.env.NEXT_OUTPUT_STANDALONE === 'true' ? 'standalone' : undefined,
+  outputFileTracingExcludes: {
+    'next-server': [
+      '**/node_modules/@dynamic-labs/**',
+      '**/node_modules/@metamask/**',
+      '**/node_modules/@reown/**',
+      '**/node_modules/@wagmi/**',
+      '**/node_modules/d3*/**',
+      '**/node_modules/viem/**',
+      '**/node_modules/wagmi/**',
+    ],
+  },
   productionBrowserSourceMaps: false,
   serverExternalPackages: [
     '@opentelemetry/sdk-node',
@@ -69,14 +80,13 @@ const moduleExports = {
     'encoding',
   ],
   experimental: {
+    cpus: Number(process.env.NEXT_BUILD_CPUS || 1),
+    staticGenerationMaxConcurrency: Number(process.env.NEXT_STATIC_GENERATION_MAX_CONCURRENCY || 1),
     staleTimes: {
       dynamic: 30,
       'static': 180,
     },
   },
-
-  // workaround for passing outDir to nextjs-routes CLI
-  outDir: 'nextjs',
 };
 
 module.exports = withBundleAnalyzer(withRoutes(moduleExports));

@@ -121,15 +121,21 @@ const SearchBarMobile = ({ isHeroBanner, onGoToSearchResults }: Props) => {
   } else {
     trigger = (
       <Button
+        type="button"
         variant="header"
         flexShrink={ 0 }
-        p={ 0 }
+        h="40px"
+        w="96px"
+        px={ 3 }
+        columnGap={ 2 }
+        aria-label="Open search"
       >
         <IconSvg
           name="search"
-          boxSize={ 6 }
+          boxSize={ 5 }
           flexShrink={ 0 }
         />
+        <span>Search</span>
       </Button>
     );
   }

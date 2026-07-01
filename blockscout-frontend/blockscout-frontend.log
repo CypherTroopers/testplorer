@@ -2,3 +2,487 @@
 - Local:         http://localhost:3000
 - Network:       http://0.0.0.0:3000
 ✓ Ready in 0ms
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Cannot find module '../server/request-meta'
+Require stack:
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js
+- /opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js
+- /opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js
+- /opt/blockscout-frontend/.next/standalone/server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/pages/_error.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/error.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[root-of-the-server]__0o5kfbr._.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/chunks/ssr/[turbopack]_runtime.js',
+    '/opt/blockscout-frontend/.next/standalone/.next/server/pages/_document.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/require.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next-server.js',
+    '/opt/blockscout-frontend/.next/standalone/node_modules/.pnpm/next@16.2.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.57.0_react-d_dd6d2c4feca03d1428133b230f00ab4e/node_modules/next/dist/server/next.js',
+    '/opt/blockscout-frontend/.next/standalone/server.js'
+  ]
+}
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames
+⨯ Error: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/opt/blockscout-frontend/.next/standalone/.next/server/pages/404.html'
+    at ignore-listed frames

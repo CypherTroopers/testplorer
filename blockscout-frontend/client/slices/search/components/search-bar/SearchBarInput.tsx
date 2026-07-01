@@ -139,11 +139,11 @@ const SearchBarInput = (
           tabIndex={ readOnly ? -1 : 0 }
           borderWidth={ isHeroBanner ? borderWidthHeroBanner : '2px' }
           borderStyle="solid"
-          borderColor={{ _light: 'blackAlpha.100', _dark: 'whiteAlpha.200' }}
-          color={{ _light: 'black', _dark: 'white' }}
+          borderColor="input.border"
+          color="input.fg"
           backgroundColor={{ base: isHeroBanner ? 'input.bg' : 'dialog.bg', lg: 'input.bg' }}
           _hover={{ borderColor: 'input.border.hover' }}
-          _focusWithin={{ _placeholder: { color: 'gray.300' }, borderColor: 'input.border.focus', _hover: { borderColor: 'input.border.focus' } }}
+          _focusWithin={{ _placeholder: { color: 'input.placeholder' }, borderColor: 'input.border.focus', _hover: { borderColor: 'input.border.focus' } }}
           enterKeyHint="search"
         />
       </InputGroup>
